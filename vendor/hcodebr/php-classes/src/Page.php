@@ -7,15 +7,13 @@ use Rain\Tpl;
 class Page {
 
 	private $tpl;
-
 	private $options = [];
-
 	private $defaults = [
 		"data"=>[]
 	];
 
 
-	public function _construct($opts = array()){
+	public function __construct($opts = array()){
 
 		$this->options = array_merge($this->defaults, $opts);
 
@@ -50,7 +48,7 @@ class Page {
 		 
 	}
 
-	public function _destruct(){
+	public function __destruct(){
 
 	
 		$this->tpl->draw("footer");
