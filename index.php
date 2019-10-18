@@ -17,7 +17,6 @@ $app->get('/', function() {
 	$page = new Page();
 
 	$page->setTpl("index");
-
 });
 
 $app->get('/admin', function() {
@@ -27,18 +26,16 @@ $app->get('/admin', function() {
 	$page = new PageAdmin();
 
 	$page->setTpl("index");
-
 });
 
 $app->get('/admin/login', function() {
     
 	$page = new PageAdmin([
 		"header"=> false,
-		"footer"=> false,
+		"footer"=> false
 	]);
 
 	$page->setTpl("login");
-
 });
 
 $app->post('/admin/login', function() {
@@ -47,7 +44,6 @@ $app->post('/admin/login', function() {
 
  header("Location: /admin");
  exit;
-
 });
 
 $app->get('/admin/logout', function(){
@@ -56,7 +52,7 @@ $app->get('/admin/logout', function(){
 
 	header("Location: /admin/login");
 	exit;
-}
+});
 
 $app->run();
 

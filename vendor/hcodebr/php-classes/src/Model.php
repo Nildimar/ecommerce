@@ -10,8 +10,6 @@ class Model{
 	{
 		$method = substr($name, 0, 3);
 		$fieldName = substr($name, 3, strlen($name));
-
-		var_dump($method, $fieldName);
 		
 		switch ($method) {
 			case "get":
@@ -32,7 +30,7 @@ class Model{
 		}
 	}
 
-	public function getValeus()
+	public function getValues()
 	{
 		return $this->values;
 	}
